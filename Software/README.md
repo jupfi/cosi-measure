@@ -108,7 +108,7 @@ Congratulations, now you´re done. Get a coffee. Enjoy.
 
 ## GUI
 
-A GUI was developed in Python for COSI measure. You can install all required packages by running:
+A GUI was developed in Python for COSI measure. You can install all required packages (ideally in a virtual environment) by running:
 
 ```bash
 pip install -r requirements.txt
