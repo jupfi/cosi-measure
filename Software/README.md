@@ -108,13 +108,18 @@ Congratulations, now you´re done. Get a coffee. Enjoy.
 
 ## GUI
 
-A GUI was developed in Python for COSI measure. Run 
+A GUI was developed in Python for COSI measure. You can install all required packages by running:
 
-     python main.py
+```bash
+pip install -r requirements.txt
+```
 
-and have a nice day enjoying your measurements.
+To start the GUI, run:
 
-You might need to install PyQT5 among some other things like Numy.
+```bash
+python main.py
+```
+
 
 
 ## Commandline Interface
