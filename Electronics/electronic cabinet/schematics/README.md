@@ -131,7 +131,7 @@ Additional contacts for
 |32       | 0 V switched        | 31 + 33           | -T4:DC-         | -Q1:L3|
 |33       | 0 V switched        | 32 + 34           | -T5:DC-         |       |
 |34       | 0 V switched        | 33                | -T6:DC-         |       |
-|35       | ext. Emergency-Stop | 34                |                 | -X3:2 |
+|35       | ext. Emergency-Stop |                   |                 | -X3:2 |
 |36       | Z+(Hardware)        | -                 | -K1:S12         | -X4:1 |
 |37       | Z-(Hardware)        | -                 | -K1:S22         | -X4:2 |
 |38       | Y+(Hardware)        | -                 | -K1:S32         | -X4:3 |
