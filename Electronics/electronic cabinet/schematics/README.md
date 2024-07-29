@@ -32,6 +32,8 @@ The contactor $-Q1$ disconnects the motor drivers from the power supply in case 
 
 $-F1$ is an overcurrent protection with RCD. Depending to the electric installation of your lab and applicable regional laws it might be optional.
 
+$-F2$ is an overcurrent protection.
+
 ### EmergencyStop
 
 It is advisable (and most likely legal obligatory) having a safe-torque-off functionality according to EN-IS0 60204-1 so that the machine can be stopped in case of an emergency. <br>
@@ -99,28 +101,28 @@ Additional contacts for
 |---------|---------------------|-------------------|-----------------|-------|
 |1        | L Mains             | -                 | -F1:2           | -S0:3 |
 |2        | N Mains             | -                 | -F1:4           | -S0:6 |
-|3        | PE                  | PE DIN-rail       | -X1:23          | -X2:PE|
+|3        | PE                  | PE DIN-rail       | -X1:24          | -X2:PE|
 |4        | PE                  | PE DIN-rail       | -T1:PE          | -X0:PE|
 |5        | PE                  | PE DIN-rail       | PE Enclosure    | -X6:3 |
 |6        | PE                  | PE DIN-rail       | PE Door         | -X7:3 |
 |7        | PE                  | PE DIN-rail       | PE Backplane    | -X8:3 |
 |8        | L, fused            | 9                 | -T1:L           |       |
-|9        | L, fused            | 8 + 10            |                 |       |
+|9        | L, fused            | 8 + 10            | -F1:3           |       |
 |10       | L, fused            | 9                 |                 | -X2:L |
-|11       | N, fused            | 12                | T1:N            | -X2:N |
-|12       | N, fused            | 11 + 13           |                 |       |
+|11       | N, fused            | 12                | -T1:N           | -X2:N |
+|12       | N, fused            | 11 + 13           | -F1:1           |       |
 |13       | N, fused            | 12                |                 |       |
 |14       | 5 V                 | 15                | -T2:V+          |       |
 |15       | 5 V                 | 14 + 16           | -K2:USB-V+      |       |
 |16       | 5 V                 | 14                | -K1:41          |       |
-|17       | 24 V                | 18                | -T1: +V         |       |
-|18       | 24 V                | 17 + 19           | -T1: +V         |       |
+|17       | 24 V                | 18                | -F2:1           |       |
+|18       | 24 V                | 17 + 19           |                 |       |
 |19       | 24 V                | 18 + 20           | -K3:+           | -X4:6 |
 |20       | 24 V                | 19                | -K1:13          | -X3:1 |
 |21       | 24 V switched       | 22                | -T3:DC+         | -Q1:2 |
 |22       | 24 V switched       | 21 + 23           |  -T4:DC+        | -Q1:2 |
 |23       | 24 V switched       | 22                | -T5:DC+         |       |
-|24       | 0 V / PE            | 25                | -X1:3           |       | 
+|24       | 0 V / PE            | 25                | -X1:3           |       |
 |25       | 0 V                 | 24 + 26           | -T1:-V          | -X4:5 |
 |26       | 0 V                 | 25 + 27           | -H1:2           |       |
 |27       | 0 V                 | 26 + 28           | -T2:-           |       |
@@ -130,14 +132,14 @@ Additional contacts for
 |31       | 0 V switched        | 32                | -T3: DC-        | -Q1:L3|
 |32       | 0 V switched        | 31 + 33           | -T4:DC-         | -Q1:L3|
 |33       | 0 V switched        | 32 + 34           | -T5:DC-         |       |
-|34       | 0 V switched        | 33                | -T6:DC-         |       |
-|35       | ext. Emergency-Stop |                   |                 | -X3:2 |
-|36       | Z+(Hardware)        | -                 | -K1:S12         | -X4:1 |
-|37       | Z-(Hardware)        | -                 | -K1:S22         | -X4:2 |
-|38       | Y+(Hardware)        | -                 | -K1:S32         | -X4:3 |
-|39       | Y-(Hardware)        | -                 | -K1:S42         | -X4:4 |
-|40       | X+(Hardware)        | -                 | -K1:S52         | -X4:7 |
-|41       | X-(Hardware)        | -                 | -K1:S62         | -X4:8 |
+|34       | 0 V switched        |                   | -T6:DC-         |       |
+|35       | ext. Emergency-Stop |                   | -S2:11          | -X3:2 |
+|36       | Z+(Hardware)        | -                 | -K1:S13         | -X4:1 |
+|37       | Z-(Hardware)        | -                 | -K1:S33         | -X4:2 |
+|38       | Y+(Hardware)        | -                 | -K1:S53         | -X4:3 |
+|39       | Y-(Hardware)        | -                 | -K1:S23         | -X4:4 |
+|40       | X+(Hardware)        | -                 | -K1:S43         | -X4:7 |
+|41       | X-(Hardware)        | -                 | -K1:S63         | -X4:8 |
 |42       | Z+(Software)        | -                 | -K3:Z+          | -X5:1 |
 |43       | Z-(Software)        | -                 | -K3:Z-          | -X5:2 |
 |44       | Y+(Software)        | -                 | -K3:Y+          | -X5:3 |
