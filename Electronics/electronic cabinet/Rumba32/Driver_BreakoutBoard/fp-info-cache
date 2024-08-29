@@ -1,18 +1,4 @@
-20918161198214539
-74LVC32APW
-0393570002
-
-
-0
-2
-2
-74LVC32APW
-MPRB2405ZP-10W
-
-
-0
-8
-8
+20867226026392702
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -49146,13 +49132,6 @@ DCDC-Converter XP_POWER JTE06 Dual
 0
 8
 8
-Converter_DCDC
-MPRB2405ZP-10W
-
-
-0
-8
-8
 Crystal
 Crystal_AT310_D3.0mm_L10.0mm_Horizontal
 Crystal THT AT310 10.0mm-10.5mm length 3.0mm diameter http://www.cinetech.com.tw/upload/2011/04/20110401165201.pdf
@@ -62124,20 +62103,6 @@ DIL DIP PDIP 2.54mm 7.62mm 300mil
 0
 4
 4
-PSU
-0393570002
-
-
-0
-2
-2
-PSU
-MPRB2405ZP-10W
-
-
-0
-8
-8
 Package_BGA
 Analog_BGA-28_4.0x6.25mm_Layout4x7_P0.8mm_Ball0.45mm_Pad0.4
 Analog BGA-28 4.0mm x 6.25mm package, pitch 0.4mm pad, based on https://www.analog.com/media/en/technical-documentation/data-sheets/8063fa.pdf
