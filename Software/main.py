@@ -63,6 +63,9 @@ parser = argparse.ArgumentParser(description='This is the COSI2 control environm
 parser.add_argument('-d','--debug', dest='debug',help='switch to debug mode')
 parser.add_argument('-q','--quiet', dest='quiet',help='run without gui')
 
+# Add an aditional argument for connecting to the cosi measure via klipper, takes the IP address as argument
+parser.add_argument('-k', '--klipper', dest='klipper', help='connect to the cosi measure via klipper')
+
 my_args = parser.parse_args()
 DEBUG=my_args.debug
 QUIET=my_args.quiet # todo suppress gui and messages when called with -q

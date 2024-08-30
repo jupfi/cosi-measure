@@ -8,6 +8,7 @@ import time
 from datetime import datetime
 import os
 import subprocess
+import moonrakerpy
 
 import pth # path object
 
