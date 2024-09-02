@@ -8,10 +8,6 @@ Please read the [assembly documentation](2024-09-02_cosi-measure_v2.0_mechanical
 
 3D CAD models and technical drawings of the individual components. You need to mill these parts from aluminum plates. If you don't have access to a CNC mill, you can also have this done by an external company. 
 
-## Folder: Complete System
-
-3D CAD model of the complete system.
-
 ## Folder: Limit switch holder
 
 3D CAD models of the limit switch holders

@@ -4,11 +4,13 @@ In this folder are all the files you need to rebuild the electronic cabinet of C
 
 ## Building Instructions
 
-1. Buy all needed components - see [bom-electronic-cabinet._v2.1.md](bom-electronic-cabinet._v2.1.md).
+### 1. Buy all needed components
+
+Buy all needed components - see [bom-electronic-cabinet._v2.1.md](bom-electronic-cabinet._v2.1.md).
 
 Keep in mind that there are some things missing that most of the labs have laying around e.g. screws, cables...
 
-2. Machine all holes in the enclosure - see drawings below
+### 2. Machine all holes in the enclosure
 
 ![milling-enclosure.png](docs/milling-enclosure.png)
 This setup is for all 6 stepper motor drivers and hardware limit switches.
@@ -35,13 +37,15 @@ Now drill all of the holes in the door for the:
 
 -->
 
-3. Mount all devices to the baseplate (see picture below) and the door. We riveted all of the DIN rails to the baseplate.
+### 3. Mount all devices to the baseplate and the door
+
+We riveted all of the DIN rails to the baseplate.
 
 ![Component Placement](docs/component_placement.jpg)
 
 The following components are mounted on 3D printed adapters for DIN rails:
 
-- Rumba32 - the STL can be found [here](...) and the clips, which you need to print twice, [here](...). You need to assemble the Rumba32 DIN rail mount but it's probably a good idea to first perform the modifications on the Rumba board described in the [Rumba32](Rumba32/README.md) section.
+- Rumba32 - the STL can be found [here](...) and the clips, which you need to print twice, [here](https://github.com/VoronDesign/Voron-0/blob/d8425f9a4c25db30f294dca77d6cb5cbd6e59c82/STLs/Electronics/PCB_DIN_Clip_x2.stl). You need to assemble the Rumba32 DIN rail mount but it's probably a good idea to first perform the modifications on the Rumba board described in the [Rumba32](Rumba32/README.md) section.
 
 ![DIN Rail Mount for Rumba32](docs/rumba_mount.jpg)
 
@@ -54,11 +58,15 @@ Figure: DIN rail mount for Raspberry Pi. There are some cables already added to 
 
 Play around with the scaling a little bit when printing in order to achieve a good fit.
 
-Note: In case you ordered the enclosure from the PCB you probably have more space compared to the picture. Just enjoy the extra space, it makes wiring easier.
+Note: In case you ordered the enclosure from the BoM you probably have more space compared to the picture. Just enjoy the extra space, it makes wiring easier.
 
-4. Build the breakoutboards, see [Levelshifter](Rumba32/Endstop_Levelshifter/README.md) and [Driver Breakoutboards](Rumba32/Driver_BreakoutBoard/README.md). Place them into the Rumba32 board.
+### 4. Build the breakoutboards
 
-5. Mount all devices to the door and the side of the enclosure. Add cables to the connectors before hand. This makes it easier to connect everything later on.
+For this see [Levelshifter](Rumba32/Endstop_Levelshifter/README.md) and [Driver Breakoutboards](Rumba32/Driver_BreakoutBoard/README.md). Place them into the Rumba32 board.
+
+### 5. Mount all devices to the door and the side of the enclosure
+
+Add cables to the connectors before hand. This makes it easier to connect everything later on.
 
 ![Endstop connector with wires](docs/Endstop_connector_wiring.jpg)
 ---
@@ -70,75 +78,85 @@ Figure: Endstop connector with wires added. You might have another connector for
 
 Figure: Motor connectors with added wires.
 
-6. Wire PE, see [schematics](schematics/README.md). Use green-yellow wire for that.
+### 6. Wire PE, see [schematics](schematics/README.md)
+
+Use green-yellow wire for that.
 
 ![PE Wiring](docs/PE_wiring.jpg)
 ---
 
-Figure: PE wiring. The PE wire is connected to the enclosure and all devices inside the enclosure. Compare it to the schematics to see where to connect it. 
+Figure: PE wiring. The PE wire is connected to the enclosure and all devices inside the enclosure. Compare it to the schematics to see where to connect it.
 
 ⚠️**Important**⚠️ Keep the 230V connectors isolated, don't use unisolated connectors like shown in the picture!
 
-7. Wire everything else, see [schematics](schematics/README.md). Keep in mind all applicable (local) regulations. 24 V DC is wired in dark blue. 230 V AC is wired in black (not brown like the pictures), the neutral wire is light blue. The 24 V power supply delivers 480 watts, so be aware to choose matching cable diameters.
+### 7. Wire everything else, see [schematics](schematics/README.md)
+
+Keep in mind all applicable (local) regulations. 24 V DC is wired in dark blue. 230 V AC is wired in black (not brown like the pictures), the neutral wire is light blue. The 24 V power supply delivers 480 watts, so be aware to choose matching cable diameters.
 
 Additionally, keep the high current motor cables away from the low voltage signal cables to avoid interference.
 
 ![Cabinet Inside](docs/cabinet-inside.JPG)
-Figure: This is an example on how the final wiring can look like. 
+Figure: This is an example on how the final wiring can look like.
 
-8. Commissioning:
-    1. connect the machine to the enclosure.
-    2. unplug the USB power supply of the RaspberryPi!
-    3. ensure/ measure that the PE is correct
-    4. connect to mains
-    5. ensure and test that all safety related things are working properly, e.g. that the safe-torque-off (emergency stop) is working correct. In case you have hardware limit switches you need them connected for testing.
+### 8. Commissioning
 
-    ![Testing of Hardware Limit Switches](docs/Testing.jpg)
-    ---
-    Figure: Testing of the hardware limit switches. As soon as one of the limit switches is triggered the safety relay should turn off.
+Do the following steps to commission the machine:
 
-    6. Set the DIP-switches of the motor drivers:
+1. Connect the machine to the enclosure.
+2. Unplug the USB power supply of the RaspberryPi!
+3. Ensure/ measure that the PE is correct
+4. Connect to mains
+5. Ensure and test that all safety related things are working properly, e.g. that the safe-torque-off (emergency stop) is working correct. In case you have hardware limit switches you need them connected for testing.
 
-        For T3:
+![Testing of Hardware Limit Switches](docs/Testing.jpg)
+---
+Figure: Testing of the hardware limit switches. As soon as one of the limit switches is triggered the safety relay should turn off.
 
-        | Switch # | Comment           | Switch Position |
-        |----------|-------------------|-----------------|
-        | SW1      | Current Setting   | ON              |
-        | SW2      | Current Setting   | ON              |
-        | SW3      | Current Setting   | OFF             |
-        | SW4      | Halt Current      | OFF             |
-        | SW5      | Microstep Setting | ON              |
-        | SW6      | Microstep Setting | OFF             |
-        | SW7      | Microstep Setting | OFF             |
-        | SW8      | Microstep Setting | ON              |
+### 6. Set the DIP-switches of the motor drivers:
 
-        For T4:
+For T3:
 
-        | Switch # | Comment           | Switch Position |
-        |----------|-------------------|-----------------|
-        | SW1      | Current Setting   | ON              |
-        | SW2      | Current Setting   | ON              |
-        | SW3      | Current Setting   | OFF             |
-        | SW4      | Halt Current      | OFF             |
-        | SW5      | Microstep Setting | ON              |
-        | SW6      | Microstep Setting | OFF             |
-        | SW7      | Microstep Setting | OFF             |
-        | SW8      | Microstep Setting | ON              |
+| Switch # | Comment           | Switch Position |
+|----------|-------------------|-----------------|
+| SW1      | Current Setting   | ON              |
+| SW2      | Current Setting   | ON              |
+| SW3      | Current Setting   | OFF             |
+| SW4      | Halt Current      | OFF             |
+| SW5      | Microstep Setting | ON              |
+| SW6      | Microstep Setting | OFF             |
+| SW7      | Microstep Setting | OFF             |
+| SW8      | Microstep Setting | ON              |
 
-        For T5:
+For T4:
 
-        | Switch # | Comment           | Switch Position |
-        |----------|-------------------|-----------------|
-        | SW1      | Current Setting   | OFF             |
-        | SW2      | Current Setting   | OFF             |
-        | SW3      | Current Setting   | ON              |
-        | SW4      | Halt Current      | OFF             |
-        | SW5      | Microstep Setting | ON              |
-        | SW6      | Microstep Setting | OFF             |
-        | SW7      | Microstep Setting | OFF             |
-        | SW8      | Microstep Setting | ON              |
+| Switch # | Comment           | Switch Position |
+|----------|-------------------|-----------------|
+| SW1      | Current Setting   | ON              |
+| SW2      | Current Setting   | ON              |
+| SW3      | Current Setting   | OFF             |
+| SW4      | Halt Current      | OFF             |
+| SW5      | Microstep Setting | ON              |
+| SW6      | Microstep Setting | OFF             |
+| SW7      | Microstep Setting | OFF             |
+| SW8      | Microstep Setting | ON              |
 
-        You can later tune the [microstepping](https://www.analog.com/en/lp/001/optimizing-stepper-motors-microstepping.html) and the motor currents to your setup. The table above might be a good starting point. <br>Keep in mind: If you change the microstep settings on the motor drivers, you also need to change it in the [printer.cfg](../software/backend/printer.cfg)-file.<br>
-        A higher microstep setting reduces the holding torque which can be compensated by more current. Having too much microsteps per full step with not enough current leads to less precise movement and increased oscillation. More info on that: <https://www.monolithicpower.com/why-microstepping-isnt-as-good-as-you-think>
+For T5:
 
-9. Turn off the main switch, wait until the 5V powersupply is discharged and then put back the USB power supply to RaspberryPi. Now you are ready to start with the [software](../Software/README.md).
+| Switch # | Comment           | Switch Position |
+|----------|-------------------|-----------------|
+| SW1      | Current Setting   | OFF             |
+| SW2      | Current Setting   | OFF             |
+| SW3      | Current Setting   | ON              |
+| SW4      | Halt Current      | OFF             |
+| SW5      | Microstep Setting | ON              |
+| SW6      | Microstep Setting | OFF             |
+| SW7      | Microstep Setting | OFF             |
+| SW8      | Microstep Setting | ON              |
+
+You can later tune the [microstepping](https://www.analog.com/en/lp/001/optimizing-stepper-motors-microstepping.html) and the motor currents to your setup. The table above might be a good starting point. <br>Keep in mind: If you change the microstep settings on the motor drivers, you also need to change it in the [printer.cfg](../software/backend/printer.cfg)-file.<br>
+
+A higher microstep setting reduces the holding torque which can be compensated by more current. Having too much microsteps per full step with not enough current leads to less precise movement and increased oscillation. More info on that: <https://www.monolithicpower.com/why-microstepping-isnt-as-good-as-you-think>
+
+### 9. Turn off the main switch
+
+Now wait until the 5V powersupply is discharged and then put back the USB power supply to RaspberryPi. Now you are ready to start with the [software](../Software/README.md).

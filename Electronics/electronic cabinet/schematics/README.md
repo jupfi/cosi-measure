@@ -48,8 +48,6 @@ It is advisable (and most likely legal obligatory) having a safe-torque-off func
 
 ![Emergency Stop](Emergency-Stop.png)
 
-<!--Hint: The safety-relay -K1 is not in production anymore. Changes to the schematic might be neccessary for a replecement of -K1. Please update this documentation when deploying another safety relays - thanks! -->
-
 ## Rumba32 and Motors
 
 ![Rumba32](Rumba32.png)
@@ -95,7 +93,6 @@ Additional contacts for
 - 2 Software limit switches
 - 5V for the motor enable
 -->
-
 
 |Contact #|Comment              |Bridged to contact |Left             |Right  |
 |---------|---------------------|-------------------|-----------------|-------|
@@ -170,60 +167,7 @@ Additional contacts for
 |69       |                     |                   |                 |       |
 |70       |                     |                   |                 |       |
 
-
-
-<!-- Old contacts
-|16       | 24 V                | 17                | -T1: +V         |       |
-|17       | 24 V                | 16 + 18           | -T1: +V         |       |
-|18       | 24 V                | 17 + 19           | -K3:+           | -X3:6 |
-|19       | 24 V                | 18                | -K1:13          | -X8:1 |
-|20       | 24 V switched       | 21                | -T3:DC+         | -Q1:2 |
-|21       | 24 V switched       | 20 + 22           |  -T4:DC+        | -Q1:2 |
-|22       | 24 V switched       | 21                | -T5:DC+         |       |
-|23       | 0 V / PE            | 24                | -X1:3           |       |
-|24       | 0 V                 | 23 + 25           | -T1:-V          | -X3:4 |
-|25       | 0 V                 | 24 + 26           | -H1:2           |       |
-|26       | 0 V                 | 25 + 27           | -T2:-           |       |
-|27       | 0 V                 | 26 + 28           | -K1:A2          |       |
-|28       | 0 V                 | 27 + 29           | -K2:USB-GND     |       |
-|29       | 0 V                 | 28                | -K3:-           | -X4:8 |
-|30       | 0 V switched        | 31                | -T3: DC-        | -Q1:L3|
-|31       | 0 V switched        | 30 + 32           | -T4:DC-         | -Q1:L3|
-|32       | 0 V switched        | 31 + 33           | -T5:DC-         |       |
-|33       | 0 V switched        | 32                | -T6:DC-         |       |
-|34       | ext. Emergency-Stop | 35                |                 | -X8:2 |
-|35       | -                   | 34                |                 | -X3:5 |
-|36       | Hard-Endstops       |                   | -S2:11          | -X3:7 |
-|37       | 12 V Endstops       |                   | -K3:12V Endstops| -X4:2 |
-|38       | Endstop Z+          |                   | -K3:Z+          | -X4:5 |
-|39       | Endstop Z-          |                   | -K3:Z-          | -X4:3 |
-|40       | Endstop Y+          |                   | -K3:Y+          | -X4:4 |
-|41       | Endstop Y-          |                   | -K3:Y-          | -X4:1 |
-|42       | Endstop X+          |                   | -K3:+           | -X4:7 |
-|43       | Endstop X-          |                   | -K3:-           | -X4:6 |
-|44       | -M1:A+              |                   | -T3:A+          | -X5:5 |
-|45       | -M1:A-              |                   | -T3:A-          | -X5:4 |
-|46       | -M1:B+              |                   | -T3:B+          | -X5:1 |
-|47       | -M1:B-              |                   | -T3:B-          | X5:2  |
-|48       | -M2:A+              |                   | -T4:A+          | -X6:5 |
-|49       | -M2:A-              |                   | -T4:A-          | -X6:4 |
-|50       | -M2:B+              |                   | -T4:B+          | -X6:1 |
-|51       | -M2:B-              |                   | -T4:B-          | X6:2  |
-|52       | -M3:A+              |                   | -T5:A+          | -X7:5 |
-|53       | -M3:A-              |                   | -T5:A-          | -X7:4 |
-|54       | -M3:B+              |                   | -T5:B+          | -X7:1 |
-|55       | -M3:B-              |                   | -T5:B-          | -X7:2 |
-|56       |                     |                   |                 |       |
-|57       |                     |                   |                 |       |
-|58       |                     |                   |                 |       |
-|59       |                     |                   |                 |       |
-|60       |                     |                   |                 |       |
-|61       |                     |                   |                 |       |
-|62       |                     |                   |                 |       |
-|63       |                     |                   |                 |       |
- -->
-
-The contacts 56 to 63 are reserved for future upgrades, e.g. additional axis.
+The contacts 61 to 70 are reserved for future upgrades, e.g. additional axis.
 
 ## X2
 
@@ -314,5 +258,3 @@ Motor Z-Axis Connector (GX20 Shielded 5 pin)
 | 3       | PE & Shield | -X1:7        |
 | 4       | A-          | -X1:57       |
 | 5       | A+          | -X1:56       |
-
-
