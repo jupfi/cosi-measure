@@ -14,7 +14,7 @@ In this folder are all the files you need to rebuild the electronic cabinet of C
 
 5. Build the breakoutboards, see [Levelshifter](Rumba32/Endstop_Levelshifter/README.md) and [Driver Breakoutboards](Rumba32/Driver_BreakoutBoard/README.md). Place them into the Rumba32 board.
 
-6. mount all devices to the door and the side of the enclosure
+6. Mount all devices to the door and the side of the enclosure
 
 7. Wire PE, see [schematics](schematics/README.md). Use green-yellow wire for that.
 
