@@ -1,1 +1,0 @@
-The 3D CAD model of the overall system was designed and can be opened with sketchup. This model ist just for illustration. The correct dimensions of all parts can be found in the documentation and the FreeCAD files.
