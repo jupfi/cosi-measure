@@ -1,6 +1,6 @@
 # Endstop BreakoutBoard
 
-![Breakout Board](docs/breakoutboard.png)
+![Breakout Board](../../res/picto/rumba32/endstop_levelshifter/breakoutboard.png)
 
 This breakoutboard needs to be placed into Rumba32 Endstop connector. It is a levelshifter for the 12 V Endstops.
 
@@ -8,7 +8,7 @@ This breakoutboard needs to be placed into Rumba32 Endstop connector. It is a le
 
 ## Schematic
 
-![Schematic](docs/schematic.png)
+![Schematic](../../res/picto/rumba32/endstop_levelshifter/schematic.png)
 
 ## BOM
 

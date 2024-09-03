@@ -26,7 +26,7 @@
 
 ### Power Distribution
 
-![Power Supply Schematic](PowerSupply.png)
+![Power Supply Schematic](../res/picto/enclosure_schematics/PowerSupply.png)
 
 The contactor $-Q1$ disconnects the motor drivers from the power supply in case of safe-torque-off (aka emergency stop). Schneider Electric has defined this way of wiring in an [application note](https://ckm-content.se.com/ckmContent/sfc/servlet.shepherd/document/download/0691H000008h5vrQAA).
 
@@ -46,14 +46,14 @@ It is advisable (and most likely legal obligatory) having a safe-torque-off func
 - with some bad luck a cheap stepper motor driver can get killed by disrupting the power supply during operation due to the back-EMF of the motor. So a motor driver has to be disabled by the enable pin before interrupting the power supply connection. A 5V signal is sent to the enbable pin of the breakout board if the safety relays turns of. This signal is assumed to be faster than the motors turning off because Q1 is a mechanical relay (switching off the machine by -S0 is always safe: the big $24 \ V$ power supply will slowly turn off the power and eventually take up most of the energy that might return from the drives.)
 - The enable input of the motor drivers is used for disabling the drives while performing a field-measurement at an already reached location. This functionality is non safety-relevant, thus it can be implemented the easy way.
 
-![Emergency Stop](Emergency-Stop.png)
+![Emergency Stop](../res/picto/enclosure_schematics/Emergency-Stop.png)
 
 ## Rumba32 and Motors
 
-![Rumba32](Rumba32.png)
+![Rumba32](../res/picto/enclosure_schematics/Rumba32.png)
 
 The [Rumba32](https://github.com/Aus3D/RUMBA32) is a 3D printer board. It is used for time-critical stuff e.g. generate the step and direction pulses for the stepper motor drivers. <br>
-The Driver Breakoutboards are little custom PCBs plugged into the Rumba32, [here](../Rumba32/Driver_BreakoutBoard/README.md) is further documentation about them.
+The Driver Breakoutboards are little custom PCBs plugged into the Rumba32, [here](rumba32/README.md) is further documentation about them.
 
 ### NEMA color codes
 
@@ -71,7 +71,7 @@ Since the cores of the shielded motor cables are black, they have numbers as ide
 
 ## RaspberryPi
 
-![RaspberryPi](RaspberryPi.png)
+![RaspberryPi](../res/picto/enclosure_schematics/RaspberryPi.png)
 
 ## Terminal Plans
 
